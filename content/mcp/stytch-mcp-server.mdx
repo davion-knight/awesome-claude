@@ -20,15 +20,15 @@ downloadUrl: /downloads/mcp/stytch-mcp-server.mcpb
 packageVerified: true
 installable: true
 installCommand: >-
-  claude mcp add --transport http stytch http://mcp.stytch.dev/mcp && claude mcp
+  claude mcp add --transport http stytch https://mcp.stytch.dev/mcp && claude mcp
   list
 usageSnippet: >-
-  claude mcp add --transport http stytch http://mcp.stytch.dev/mcp && claude mcp
+  claude mcp add --transport http stytch https://mcp.stytch.dev/mcp && claude mcp
   list
 copySnippet: |-
   {
     "stytch": {
-      "url": "http://mcp.stytch.dev/mcp",
+      "url": "https://mcp.stytch.dev/mcp",
       "transport": "http"
     }
   }
@@ -36,7 +36,7 @@ configSnippet: |-
   {
     "mcpServers": {
       "stytch": {
-        "url": "http://mcp.stytch.dev/mcp",
+        "url": "https://mcp.stytch.dev/mcp",
         "type": "http"
       }
     }
@@ -47,7 +47,7 @@ prerequisites:
   - Stytch account (free or paid plan)
   - Stytch API key authentication (for mcp.stytch.dev MCP connection)
   - Stytch project_id and secret from Dashboard (test or live environment)
-  - "Network access to mcp.stytch.dev (HTTP transport, not HTTPS)"
+  - "Network access to mcp.stytch.dev (HTTPS transport)"
   - >-
     Understanding of Stytch authentication concepts (magic links, OAuth, MFA,
     sessions)
@@ -69,17 +69,10 @@ tags:
   - security
   - auth
 keywords:
-  - auth
-  - authentication
-  - claude
-  - development
-  - identity
-  - mcp
-  - mcp servers
-  - security
-  - server
-  - stytch
-  - tools
+  - stytch mcp server
+  - claude stytch auth integration
+  - authentication mcp server
+  - stytch identity mcp
 readingTime: 1
 difficultyScore: 11
 hasTroubleshooting: true
@@ -123,7 +116,7 @@ Manage Stytch authentication configurations and workspace settings for identity 
 
 ### Claude Code
 
-1. Run: claude mcp add --transport http stytch http://mcp.stytch.dev/mcp
+1. Run: claude mcp add --transport http stytch https://mcp.stytch.dev/mcp
 2. Verify installation: claude mcp list
 3. Test connection: claude mcp status stytch
 4. Configure your Stytch project_id and secret (from Dashboard API Keys section)
@@ -143,7 +136,7 @@ Manage Stytch authentication configurations and workspace settings for identity 
 - Stytch account (free or paid plan)
 - Stytch API key authentication (for mcp.stytch.dev MCP connection)
 - Stytch project_id and secret from Dashboard (test or live environment)
-- Network access to mcp.stytch.dev (HTTP transport, not HTTPS)
+- Network access to mcp.stytch.dev (HTTPS transport)
 - Understanding of Stytch authentication concepts (magic links, OAuth, MFA, sessions)
 - Stytch Dashboard access (for API key management and redirect URL configuration)
 - Claude Desktop 0.7.0+ or Claude Code with MCP support
@@ -156,7 +149,7 @@ Manage Stytch authentication configurations and workspace settings for identity 
 ```json
 {
   "stytch": {
-    "url": "http://mcp.stytch.dev/mcp",
+    "url": "https://mcp.stytch.dev/mcp",
     "transport": "http"
   }
 }
